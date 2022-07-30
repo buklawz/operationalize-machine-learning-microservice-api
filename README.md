@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The project entails Operationalizing a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. 
+The project entails operationalizing a python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. 
 The primary aim of the project is to containerize the python flask-app and deploy the container in Kubernetes cluster. 
 
 ### Project Tasks
