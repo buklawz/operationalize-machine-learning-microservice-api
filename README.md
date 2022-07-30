@@ -1,3 +1,5 @@
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/buklawz/operationalize-machine-learning-microservice-api/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/buklawz/operationalize-machine-learning-microservice-api/tree/main)
+
 ## Project Overview
 
 The project entails Operationalizing a Python flask app—in a provided file, `app.py`—that serves out predictions (inference) about housing prices through API calls. 
