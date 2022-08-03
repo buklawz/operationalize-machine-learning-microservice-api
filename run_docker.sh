@@ -4,7 +4,7 @@
 
 # Step 1:
 # Build image and add a descriptive tag
-docker build --tag=ml-ms-api .
+docker build --tag=ml-app .
 
 # Step 2:
 # List docker images
@@ -12,4 +12,4 @@ docker image ls
 
 # Step 3:
 # Run flask app
-docker run -p 8080:80 ml-ms-api
+docker run -p 8080:80 ml-app

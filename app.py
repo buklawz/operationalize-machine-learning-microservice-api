@@ -1,3 +1,4 @@
+import sys
 from flask import Flask, request, jsonify
 from flask.logging import create_logger
 import logging
@@ -9,6 +10,18 @@ from sklearn.preprocessing import StandardScaler
 app = Flask(__name__)
 LOG = create_logger(app)
 LOG.setLevel(logging.INFO)
+
+logger = logging.getLogger("__name__")
+logging.basicConfig( level=logging.DEBUG)
+h1 = logging.StreamHandler(sys.stdout)
+h1.setLevel(logging.DEBUG)
+h2 = logging.StreamHandler(sys.stderr)
+h2.setLevel(logging.ERROR)
+logger.addHandler(h1)
+logger.addHandler(h2)
+
+
+
 
 def scale(payload):
     """Scales Payload"""
@@ -63,9 +76,9 @@ def predict():
     # get an output prediction from the pretrained model, clf
     prediction = list(clf.predict(scaled_payload))
     # TO DO:  Log the output prediction value
-    LOG.info(f"prediction: {prediction}")
     return jsonify({'prediction': prediction})
 
+    
 if __name__ == "__main__":
     # load pretrained model as clf
     clf = joblib.load("./model_data/boston_housing_prediction.joblib")
